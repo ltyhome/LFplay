@@ -40,6 +40,8 @@ android {
     productFlavors {
         develop {
             dimension "default"
+            buildConfigField "String", "INSTANCE_ADDRESS", '"ltyhome.us1a.cloud.realm.io"'
+            buildConfigField "String", "AUTH_URL", '"https://ltyhome.us1a.cloud.realm.io/auth"'
         }
         online {
             dimension "default"
