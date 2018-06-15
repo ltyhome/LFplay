@@ -11,5 +11,5 @@ import com.android.ltyhome.lfplay.BuildConfig
 object Constants {
     val INSTANCE_ADDRESS = BuildConfig.INSTANCE_ADDRESS
     val AUTH_URL = BuildConfig.AUTH_URL
-    val REALM_NAME = "lfApp.realm"
+    var REALM_NAME = "lfApp.realm"
 }

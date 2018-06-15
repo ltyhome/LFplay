@@ -22,5 +22,7 @@ class RealmHelper private constructor(app:Application,realmName:String){
             RealmHelper(app,REALM_NAME)
             return Realm.getDefaultInstance()
         }
+
+
     }
 }

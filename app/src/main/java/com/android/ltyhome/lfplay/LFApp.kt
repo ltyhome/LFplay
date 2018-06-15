@@ -37,8 +37,6 @@ class LFApp : Application() {
 
     private fun initApplication(){
         instance = this
-        RealmHelper.get()
-
     }
 
 
