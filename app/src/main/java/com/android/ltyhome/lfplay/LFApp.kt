@@ -5,6 +5,7 @@ import android.app.Application
 import android.content.Context
 import android.support.multidex.MultiDex
 import android.text.TextUtils
+import com.android.ltyhome.lfplay.utils.RealmHelper
 import com.tencent.bugly.beta.Beta
 
 /**
@@ -36,7 +37,7 @@ class LFApp : Application() {
 
     private fun initApplication(){
         instance = this
-        /** 初始化地址数据库 **/
+        RealmHelper.get()
 
     }
 

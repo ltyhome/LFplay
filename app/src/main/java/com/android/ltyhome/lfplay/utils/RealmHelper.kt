@@ -1,6 +1,7 @@
 package com.android.ltyhome.lfplay.utils
 
 import android.app.Application
+import com.android.ltyhome.lfplay.utils.Constants.REALM_NAME
 import io.realm.Realm
 import io.realm.RealmConfiguration
 
@@ -17,7 +18,8 @@ class RealmHelper private constructor(app:Application,realmName:String){
         Realm.setDefaultConfiguration(config)
     }
     companion object {
-        fun get():Realm{
+        fun get(app: Application):Realm{
+            RealmHelper(app,REALM_NAME)
             return Realm.getDefaultInstance()
         }
     }
