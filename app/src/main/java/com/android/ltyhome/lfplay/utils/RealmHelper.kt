@@ -16,7 +16,7 @@ import java.lang.reflect.InvocationTargetException
  *邮箱：ltyhome@yahoo.com.hk
  */
 class RealmHelper private constructor(app:Application,realmName:String){
-    var mRealm: Realm? = null
+    private var mRealm: Realm? = null
     init {
         Realm.init(app)
         val config = RealmConfiguration.Builder().directory(app.filesDir).name(realmName).schemaVersion(0).build()
@@ -26,9 +26,8 @@ class RealmHelper private constructor(app:Application,realmName:String){
 
     @Synchronized
     private fun openRealm(): Realm {
-        if(null == mRealm) {
+        if(null == mRealm)
             mRealm = Realm.getDefaultInstance()
-        }
         return mRealm!!
     }
 
